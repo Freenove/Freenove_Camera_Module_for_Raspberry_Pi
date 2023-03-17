@@ -1,6 +1,6 @@
-## Freenove_5MP_Camera_for_Raspberry_Pi
+## Freenove_Camera_Module_for_Raspberry_Pi
 
-A 5MP Camera for Raspberry Pi.
+Camera module for Raspberry Pi.
 
 > Raspberry Pi® is a trademark of Raspberry Pi Foundation (https://www.raspberrypi.org/). 
 
