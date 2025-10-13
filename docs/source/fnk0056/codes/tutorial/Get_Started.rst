@@ -103,13 +103,13 @@ If you are a Raspberry PI 5, add the following command.
 
 .. code-block:: text
     
-    dtoverlay = ov5647,cam0
+    dtoverlay=ov5647,cam0
 
 If you are not a Raspberry PI 5, add the following command.
 
 .. code-block:: text
     
-    dtoverlay = ov5647
+    dtoverlay=ov5647
 
 .. image:: ../_static/imgs/Get_Started/start09.png
    :align: center
