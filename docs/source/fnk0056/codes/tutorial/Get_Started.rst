@@ -9,67 +9,151 @@ Please note that our FNK0056 prodcut, which comes with the camera model OV5647, 
 
 This tutorial introduces the use of product FNK0056(B) on Raspberry Pi.
 
-+-------------+--------------+------------------------+-----------------------+
-| Product SKU | Camera Model | Work with Raspberry Pi | Wrok with Jetson Nano |
-+=============+==============+========================+=======================+
-| FNK0056     | OV5647       | Yes(this tutorial)     | No                    |
-+-------------+--------------+------------------------+-----------------------+
-| FNK0056B    | IMX219       | Yes(this tutorial)     | Yes                   |
-+-------------+--------------+------------------------+-----------------------+
+.. table::
+    :align: center
+    :class: table-line
+    
+    +-------------+--------------+------------------------+-----------------------+
+    | Product SKU | Camera Model | Work with Raspberry Pi | Wrok with Jetson Nano |
+    +=============+==============+========================+=======================+
+    | FNK0056     | OV5647       | Yes(this tutorial)     | No                    |
+    +-------------+--------------+------------------------+-----------------------+
+    | FNK0056B    | IMX219       | Yes(this tutorial)     | Yes                   |
+    +-------------+--------------+------------------------+-----------------------+
 
 Step 1 What you will need
 *************************************
 
-Raspberry Pi computer with a Camera Module port
+**Raspberry Pi computer with a Camera Module port**
 
 All current models of Raspberry Pi have a port for connecting the Camera Module.
 
 .. image:: ../_static/imgs/Get_Started/start00.png
    :align: center
 
-.. note::
+**A Raspberry Pi Camera Module (Included in this kit)**
+
+.. table::
+    :align: center
+    :class: table-line
     
-    If you want to use a Raspberry Pi Zero, you need a Camera Module ribbon cable that fits the Raspberry Pi Zero's smaller Camera Module port.
+    +----------------------------------+-----------------------------------+
+    | **FNK0056 OV5647 Camera Module** | **FNK0056B IMX219 Camera Module** |
+    +----------------------------------+-----------------------------------+
+    | |start17|                        | |start18|                         |
+    +----------------------------------+-----------------------------------+
 
-**Raspberry Pi Camera Module**
+.. |start17| image:: ../_static/imgs/Get_Started/start17.png
+.. |start18| image:: ../_static/imgs/Get_Started/start18.png
 
-.. image:: ../_static/imgs/Get_Started/start01.png
-   :align: center
+A Camera cable (Included in this kit)
 
-There are two versions of the Camera Module:
+.. table::
+    :align: center
+    :class: table-line
+    
+    +------------------------------------------------------------------+
+    | **Ribbon cable (15cm) for RaspberryPi 4B/3B+/3B/3A+/2B/1B+/1A+** |
+    |                                                                  |
+    | |start19|                                                        |
+    +------------------------------------------------------------------+
+    | **Ribbon cable (15cm) for Raspberry Pi 5 /Zero 2 W/Zero W/Zero** |
+    |                                                                  |
+    | |start20|                                                        |
+    +------------------------------------------------------------------+
 
-The standard version (https://www.raspberrypi.org/products/camera-module-v2/), which is designed to
+.. |start19| image:: ../_static/imgs/Get_Started/start19.png
+.. |start20| image:: ../_static/imgs/Get_Started/start20.png
 
-take pictures in normal light
-
-The NoIR version (https://www.raspberrypi.org/products/pi-noir-camera-v2/), which doesn't have an infrared filter, so you can use it together with an infrared light source to take pictures in the dark.
-
-Step 2 Connect and install the Camera Module
+Step 2 Assembly and Wiring
 ************************************************
+
+Wiring
+================================================
+
+Camera Side
+------------------------------------------------
+
+1.	Gently pull down the plastic clip. 
+
+.. table::
+    :align: center
+    :class: table-line
+    
+    +-----------+-----------+
+    | |start21| | |start22| |
+    +-----------+-----------+
+
+.. |start21| image:: ../_static/imgs/Get_Started/start21.png
+.. |start22| image:: ../_static/imgs/Get_Started/start22.png
+
+2.	Insert the cable and press back the click.
+
+.. table::
+    :align: center
+    :class: table-line
+    
+    +-----------------------------------------------+-----------+-----------+
+    |                                               | OV5647    | IMX219    |
+    +===============================================+===========+===========+
+    | with Raspberry Pi 4B /3B+/3B/3A+/2B/1B+/1A+   | |start23| | |start24| |
+    +-----------------------------------------------+-----------+-----------+
+    | with Raspberry Pi 5/Zero 2 W/Zero W/Zero      | |start25| | |start26| |
+    +-----------------------------------------------+-----------+-----------+
+
+.. |start23| image:: ../_static/imgs/Get_Started/start23.png
+.. |start24| image:: ../_static/imgs/Get_Started/start24.png
+.. |start25| image:: ../_static/imgs/Get_Started/start25.png
+.. |start26| image:: ../_static/imgs/Get_Started/start26.png
+
+Raspberry Pi Side
+--------------------------------------------------
 
 **Ensure your Raspberry Pi is turned off.**
 
 1. Locate the Camera Module port.
 
-.. image:: ../_static/imgs/Get_Started/start02.png
+.. image:: ../_static/imgs/Get_Started/start27.png
    :align: center
 
 2. Gently pull up on the edges of the port's plastic clip.
 
-.. image:: ../_static/imgs/Get_Started/start03.png
+.. image:: ../_static/imgs/Get_Started/start28.png
    :align: center
 
 3. Insert the Camera Module ribbon cable; make sure the connectors at the bottom of the ribbon cable are facing the contacts in the port.
 
-.. image:: ../_static/imgs/Get_Started/start04.png
+.. image:: ../_static/imgs/Get_Started/start29.png
    :align: center
 
 4. Push the plastic clip back into place.
 
-.. image:: ../_static/imgs/Get_Started/start05.png
+.. image:: ../_static/imgs/Get_Started/start30.png
    :align: center
 
-.. image:: ../_static/imgs/Get_Started/start06.png
+.. table::
+    :align: center
+    :class: table-line
+    
+    +----------------------------------------------------------+
+    | Physical pictures with Raspberry Pi 4 and 5 as examples. |
+    +----------------------------------------------------------+
+    | Raspberry Pi 4                                           |
+    |                                                          |
+    | |start31|                                                |
+    +----------------------------------------------------------+
+    | Raspberry Pi 5                                           |
+    |                                                          |
+    | |start32|                                                |
+    +----------------------------------------------------------+
+
+.. |start31| image:: ../_static/imgs/Get_Started/start31.png
+.. |start32| image:: ../_static/imgs/Get_Started/start32.png
+
+Assemble the camera support
+------------------------------------------------
+
+.. image:: ../_static/imgs/Get_Started/start33.png
    :align: center
 
 Step 3 How to control the Camera Module via the command line
@@ -99,13 +183,7 @@ Take the ov5647 camera as an example.
 
 3.	Add the following instruction at the very bottom.
 
-If you are a Raspberry PI 5, add the following command.
-
-.. code-block:: text
-    
-    dtoverlay=ov5647,cam0
-
-If you are not a Raspberry PI 5, add the following command.
+If you are **not a Raspberry PI 5**, add the following command.
 
 .. code-block:: text
     
@@ -114,15 +192,24 @@ If you are not a Raspberry PI 5, add the following command.
 .. image:: ../_static/imgs/Get_Started/start09.png
    :align: center
 
+If you are a **Raspberry PI 5**, add the following command.
+
+.. code-block:: text
+    
+    dtoverlay=ov5647,cam0
+
+.. image:: ../_static/imgs/Get_Started/start34.png
+   :align: center
+
 :red:`Note:`
 
-1. if your camera is imx219, please change ov5647 to imx219.
+   1. :red:`If your camera is imx219, please change ov5647 to imx219.`
 
-2. If you actually connect the camera to cam1 instead of cam0, change cam0 to cam1.
+   2. :red:`If you actually connect the camera to cam1 instead of cam0, change cam0 to cam1.`
 
-4. Save the file and exit.
+Save the file and exit.
 
-5. Reboot your raspberry pi.
+Reboot your raspberry pi.
 
 .. code-block:: console
     
@@ -132,7 +219,7 @@ Before testing the camera, run the following command to see if the camera can be
 
 .. code-block:: console
     
-    libcamera-hello --list-cameras
+    rpicam-hello -list-cameras
 
 .. image:: ../_static/imgs/Get_Started/start10.png
    :align: center
@@ -148,13 +235,13 @@ Or this command:
 
 /dev/video0 indicates the camera is connected. If you do not find this device, please check the camera wiring. You may reconnect it and try again.
 
-Please note that when operating the camera wiring, you need to shut down the raspberry pi first; otherwise, it may burn the camera.
+If the camera cannot be detected with the above two commands, please check the camera wiring. You may try reconnecting it to ensure good contact. 
 
-You can check that libcamera is working by opening a command window and typing:
+Always ensure that your Raspberry Pi is not powered before operating the camera wiring to avoid burning them.
 
 .. code-block:: console
     
-    libcamera-hello
+    rpicam-hello
 
 You should see a camera preview window for about five seconds. If you do not, please refer to the Raspberry Pi camera documentation.
 
@@ -162,7 +249,7 @@ You can also enter the following command to capture an image with a resolution o
 
 .. code-block:: console
     
-    libcamera-jpeg -o test.jpg -t 2000 -width 800 -height 600
+    rpicam-jpeg -o test.jpg -t 2000 --width 800 --height 600
 
 If you have any concerns, please contact us via email: support@freenove.com
 
@@ -194,7 +281,10 @@ Or you can Open Terminal,
 
 .. code-block:: console
 
-    https://github.com/Freenove/Freenove_Camera_Module_for_Raspberry_Pi
+    git clone https://github.com/Freenove/Freenove_Camera_Module_for_Raspberry_Pi
+
+.. image:: ../_static/imgs/Get_Started/start35.png
+   :align: center
 
 2. Enter Raspberry_Pi folder with cd command.
 
@@ -280,7 +370,7 @@ The supported transforms are:
 
 It's important to realise that the display transform discussed here does not have any effect on the actual images received from the camera. It only applies the requested transform as it renders the pixels onto the screen. We’ll encounter camera transforms again when it comes actually to transforming the images as the camera delivers them. Please also note that in the example above, the start_preview() function must be called before the call to picam2.start() . Finally, if the camera images have a different aspect ratio to the preview window, they will be letter- or pillar-boxed to fit, preserving the image’s proper aspect ratio.
 
-Next use the camera to capture videos:
+**Next use the camera to capture videos:**
 
 In Picamera2, the process of capturing and encoding video is largely automatic. The application only has to define what encoder it wants to use to compress the image data, and how it wants to output this compressed data stream.
 
