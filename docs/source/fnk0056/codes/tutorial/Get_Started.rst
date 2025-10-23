@@ -219,15 +219,6 @@ Before testing the camera, run the following command to see if the camera can be
 
 .. code-block:: console
     
-    rpicam-hello -list-cameras
-
-.. image:: ../_static/imgs/Get_Started/start10.png
-   :align: center
-
-Or this command:
-
-.. code-block:: console
-    
     ls /dev/video*
 
 .. image:: ../_static/imgs/Get_Started/start11.png
